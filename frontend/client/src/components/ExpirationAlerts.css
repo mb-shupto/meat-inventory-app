@@ -1,0 +1,50 @@
+/* client/src/ExpirationAlerts.css */
+
+.alerts-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.alerts-container h2 {
+  text-align: center;
+  color: #d9534f;
+  margin-bottom: 1.5rem;
+}
+
+.alerts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.alerts-table th,
+.alerts-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.alerts-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.expiring-item {
+  background-color: #fcf8e3; /* A light yellow color for alert */
+}
+
+.expiring-item:hover {
+  background-color: #faf2cc;
+}
+
+.alerts-container p {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 2rem;
+}
