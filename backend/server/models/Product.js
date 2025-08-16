@@ -7,6 +7,7 @@ const ProductSchema = new mongoose.Schema({
   storageRequirements: String,
   shelfLife: Number, // In days
   packagingDetails: String,
+  unitPrice: { type: Number, required: true, min: 0 },
   supplier: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Supplier'

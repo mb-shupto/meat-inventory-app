@@ -6,7 +6,8 @@ import ProductList from './components/ProductList';
 import AddStockForm from './components/AddStockForm';
 import InventoryDashboard from './components/InventoryDashboard';
 import StockDepletionForm from './components/StockDepletionForm';
-import ExpirationAlerts from './components/ExpirationAlerts'; // <-- Import the new component
+import ExpirationAlerts from './components/ExpirationAlerts'; 
+import RecallForm from './components/RecallForm';
 import './App.css';
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
           <button onClick={() => setView('products')}>Products</button>
           <button onClick={() => setView('inventory')}>Inventory</button>
           <button onClick={() => setView('deplete')}>Deplete Stock</button>
-          <button onClick={() => setView('alerts')}>Expiring Alerts</button> {/* <-- New Button */}
+          <button onClick={() => setView('alerts')}>Expiring Alerts</button>
+          <button onClick={() => setView('recall')}>Recall</button> {/* <-- New Button */}
         </nav>
       </header>
       <main>
@@ -50,6 +52,9 @@ function App() {
         )}
         {view === 'alerts' && (
           <ExpirationAlerts refreshAlerts={handleRefresh} />
+        )}
+        {view === 'recall' && (
+          <RecallForm onRecallInitiated={handleRefresh} /> // <-- New component
         )}
       </main>
     </div>

@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 5000;
 const productRoutes = require('./routes/productRoutes');
 const supplierRoutes = require('./routes/supplierRoutes');
 const inventoryRoutes = require('./routes/inventoryRoutes');
+const recallRoutes = require('./routes/recallRoutes');
+const reportRoutes = require('./routes/reportRoutes');
 
 // Use routes
 app.use('/api/products', productRoutes);
@@ -18,6 +20,8 @@ app.use(express.json());
 app.use('/api/suppliers', supplierRoutes);
 app.use('/api/inventory', inventoryRoutes); 
 app.use('api/products', productRoutes);
+app.use('/api/recalls', recallRoutes);
+app.use('/api/reports', reportRoutes);
 
 // Connect to MongoDB
 const mongoURI = process.env.MONGO_URI;
